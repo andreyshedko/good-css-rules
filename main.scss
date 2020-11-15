@@ -1,4 +1,32 @@
+/*
+* When adding a button, reset its background, or else it will look different across browsers.
+*/
 button {
   appearance: none;
   background: transparent;
+}
+
+/*
+* When adding an image, define max-width: 100%, so that the image resizes when the screen is small. 
+* Otherwise, the browser will show a horizontal scroll bar.
+*/
+img {
+    max-width: 100%;
+    object-fit: cover; // When you resize an image in CSS, it could be compressed or stretched if the aspect ratio is not consistent with the width and height of the image.
+}
+
+/*
+* When an article is being viewed on a mobile screen, 
+* a long word or inline link might cause a horizontal scroll bar to appear. Using CSS’ word-break will prevent that from happening.
+*/
+.long-content {
+  word-break: break-all;
+}
+
+// Fixing Elements To The Top Of The Screen When The Viewport Is Not Tall Enough
+@media (min-height: 500px) {
+    .header {
+        position: sticky;
+        top: 0;
+    }
 }
