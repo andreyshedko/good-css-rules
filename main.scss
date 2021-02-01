@@ -40,6 +40,7 @@ button {
 img {
     max-width: 100%;
     object-fit: cover; // When you resize an image in CSS, it could be compressed or stretched if the aspect ratio is not consistent with the width and height of the image.
+    aspect-ratio: 16/9; // Maintaining proper aspect ratios in your media and layout containers gets a little bit more straightforward.
 }
 
 select {
