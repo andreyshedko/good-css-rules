@@ -77,6 +77,14 @@ p {  width: clamp(45ch, 50%, 75ch);}
 }
 
 /*
+* Increase rendering speed by omitting parts that out of viewport
+*/
+.story {
+  content-visibility: auto;
+  contain-intrinsic-size: 100px 1000px; // alleged element size
+}
+
+/*
 * Absolute positioned container
 */
 .container {
