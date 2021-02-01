@@ -70,6 +70,14 @@ select {
   word-break: break-all;
 }
 
+/*
+* Absolute positioned container
+*/
+.container {
+  display: grid;  
+  place-items: center;
+}
+
 // Fixing Elements To The Top Of The Screen When The Viewport Is Not Tall Enough
 @media (min-height: 500px) {
     .header {
