@@ -65,7 +65,12 @@ select {
 /*
 * Making sure that paragraph not less and not more specific size
 */
-p {  width: clamp(45ch, 50%, 75ch);}
+p {
+  min-width: 0;
+  width: clamp(45ch, 50%, 75ch);
+  // Fixing problem of the long words
+  overflow-wrap: break-word;
+}
 
 
 /*
@@ -99,3 +104,5 @@ p {  width: clamp(45ch, 50%, 75ch);}
         top: 0;
     }
 }
+
+
