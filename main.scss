@@ -105,4 +105,10 @@ p {
     }
 }
 
+// Sticky footer
+body > footer {
+  position: sticky;
+  top: 100vh;
+}
+
 
