@@ -110,5 +110,26 @@ body > footer {
   position: sticky;
   top: 100vh;
 }
+// Scrollbar improvements
+.scroll-container {
+  overflow: scroll;
+
+  @supports (scrollbar-gutter: stable) {
+    overflow: auto;
+    // reserve space for scrollbars
+    scrollbar-gutter: stable;
+    // allows creating an offset at the edge of the scrollport
+    scroll-padding-top: var(--header-height);
+    scroll-behavior: smooth;
+    // prevent scroll-chaining in nested scrolling areas
+    overscroll-behavior: contain;
+    // sets how strictly snap points are enforced on the scroll container in case there is one
+    scroll-snap-type: x mandatory;
+    & > * {
+      scroll-snap-align: start;
+    }
+  }
+}
+
 
 
